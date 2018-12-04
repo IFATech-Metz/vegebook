@@ -141,7 +141,7 @@
                       </div>
 
                       <div id="add_part" class="tab-pane fade">
-                        <form action=" " method="post">           
+                        <form action="traitement_add.php" method="post"  enctype="multipart/form-data">           
                                 <fieldset>
                                     <legend>Classification</legend>
                                     <label for="nom" title="champs requis">* Nouvelle entrée :</label>
@@ -149,13 +149,15 @@
 
                                     <label for="categorie" title="champs requis">* Catégorie :</label>
                                         <select name="catégorie" id="categorie">
-                                            <option value="legume">Légumes</option>
-                                            <option value="fruit">Fruits</option>
-                                            <option value="aromatique">Plantes</option>
+                                            <option value="legumes">Légumes</option>
+                                            <option value="fruits">Fruits</option>
+                                            <option value="plantes">Plantes</option>
                                         </select><br>
-
+<!-- 
                                     <label for="image">Ajouter une photo :</label>
-                                        <input type="texte" name="image" id="image"><br>
+                                        <input type="texte" name="image" id="image"><br> -->
+                                        <label for="image">Ajouter une photo :</label>
+                                        <input type="file" name="file_img" id="image"/><br>
                                 </fieldset>
 
                                 <fieldset>
@@ -183,7 +185,7 @@
                                 </fieldset>
 
                                     <p>Les champs portant une * doivent être renseignés !</p>
-                                    <input type="submit">
+                                    <input name="add_creation" type="submit">
                             </form>
                       </div>
 
@@ -191,7 +193,6 @@
                             <table id="modify_tab">
                                 <thead>
                                       <tr>
-                                        <th class="table_title_delete"></th>
                                         <th class="table_title_id">id</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
@@ -205,7 +206,7 @@
                                 </thead>
 
                                 <tbody>
-                                    <?php include('modify-view.php');?>
+                                    <?php include('view-treatement.php');?>
                                 </tbody>
                             </table>
                       </div>
