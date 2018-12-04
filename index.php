@@ -191,7 +191,6 @@
                             <table id="modify_tab">
                                 <thead>
                                       <tr>
-                                        <th class="table_title_delete"></th>
                                         <th class="table_title_id">id</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
@@ -205,7 +204,7 @@
                                 </thead>
 
                                 <tbody>
-                                    <?php include('modify-view.php');?>
+                                    <?php include('view-treatement.php');?>
                                 </tbody>
                             </table>
                       </div>
