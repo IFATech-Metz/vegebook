@@ -101,8 +101,9 @@
   
     <?php if(isset($_GET['type'])){?>
             <section id="tab-section">
+                
                     
-                <h1> Mes <?php echo $_GET['type'] ?></h1>
+                <h1> <?php $type = $_GET['type']; echo "<img src='images/ressources/$type.png'>" ?><br> Mes <?php echo $_GET['type'] ?></h1>
                         
                 <div class="wrapper">
                     <ul class="nav nav-tabs">
@@ -190,6 +191,7 @@
                             <table id="modify_tab">
                                 <thead>
                                       <tr>
+                                        <th class="table_title_delete"></th>
                                         <th class="table_title_id">id</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
@@ -203,7 +205,7 @@
                                 </thead>
 
                                 <tbody>
-                                    <?php include('view-treatement.php');?>
+                                    <?php include('modify-view.php');?>
                                 </tbody>
                             </table>
                       </div>

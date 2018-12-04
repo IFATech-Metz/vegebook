@@ -277,12 +277,22 @@ margin-left: 70px;
 #tab-section
 {
     margin-top: 60px;
+    
 }
 
 #tab-section h1
 {
-   color: red;
-    text-align: center;
+   color: black;
+   text-align: center;
+    font-family: 'Mystery Quest', cursive;
+    margin-bottom: 50px;
+}
+
+#tab-section h1 img
+
+{
+    height : 50px;
+    margin-bottom: 15px;
 }
 
 /*configuration tableau*/
