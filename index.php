@@ -166,50 +166,52 @@
                             <!--                ajouter éléments-->                               
 
                         <div id="add_part" class="tab-pane fade">
-                            <form action="traitement_add.php" method="post">           
-                                    <fieldset>
-                                        <legend>Classification</legend>
-                                        <label for="nom" title="champs requis">* Nouvelle entrée :</label>
-                                            <input type="text" name="nom" id="nom"><br>
+                             <form action="traitement_add.php" method="post"  enctype="multipart/form-data">           
+                                <fieldset>
+                                    <legend>Classification</legend>
+                                    <label for="nom" title="champs requis">* Nouvelle entrée :</label>
+                                        <input type="text" name="nom" id="nom"><br>
 
-                                        <label for="categorie" title="champs requis">* Catégorie :</label>
-                                            <select name="catégorie" id="categorie">
-                                                <option value="legume">Légumes</option>
-                                                <option value="fruit">Fruits</option>
-                                                <option value="aromatique">Plantes</option>
-                                            </select><br>
-
+                                    <label for="categorie" title="champs requis">* Catégorie :</label>
+                                        <select name="catégorie" id="categorie">
+                                            <option value="legumes">Légumes</option>
+                                            <option value="fruits">Fruits</option>
+                                            <option value="plantes">Plantes</option>
+                                        </select><br>
+<!-- 
+                                    <label for="image">Ajouter une photo :</label>
+                                        <input type="texte" name="image" id="image"><br> -->
                                         <label for="image">Ajouter une photo :</label>
-                                            <input type="texte" name="image" id="image"><br>
-                                    </fieldset>
+                                        <input type="file" name="file_img" id="image"/><br>
+                                </fieldset>
 
-                                    <fieldset>
-                                        <legend>Informations</legend>   
+                                <fieldset>
+                                    <legend>Informations</legend>   
 
-                                        <label for="plantation">Date de plantation :</label>
-                                            <input type="date" name="plantation" id="plantation"><br>
+                                    <label for="plantation">Date de plantation :</label>
+                                        <input type="date" name="plantation" id="plantation"><br>
 
-                                        <label for="recolte">Date de récolte estimée :</label>
-                                            <input type="date" name="recolte" id="recolte"><br>                    
+                                    <label for="recolte">Date de récolte estimée :</label>
+                                        <input type="date" name="recolte" id="recolte"><br>                    
 
-                                        <label for="quantite">Quantité plantée :</label>
-                                            <input type="number" name="quantite" id="quantite" min=0 ><br>
+                                    <label for="quantite">Quantité plantée :</label>
+                                        <input type="number" name="quantite" id="quantite" min=0 ><br>
 
-                                        <label for="frequence">Fréquence d'arrosage :</label>
-                                            <input type="text" name="frequence" id="frequence"><br>
+                                    <label for="frequence">Fréquence d'arrosage :</label>
+                                        <input type="text" name="frequence" id="frequence"><br>
 
-                                        <label for="arrosage">Dernier arrosage :</label>
-                                            <input type="date" name="arrosage" id="arrosage"><br>
-                                    </fieldset>
-                                    <fieldset>
-                                        <legend>Commentaires</legend>
+                                    <label for="arrosage">Dernier arrosage :</label>
+                                        <input type="date" name="arrosage" id="arrosage"><br>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Commentaires</legend>
 
-                                        <textarea name="notes" id="notes"></textarea><br>
-                                    </fieldset>
+                                    <textarea name="notes" id="notes"></textarea><br>
+                                </fieldset>
 
-                                        <p>Les champs portant une * doivent être renseignés !</p>
-                                        <input type="submit">
-                                </form>
+                                    <p>Les champs portant une * doivent être renseignés !</p>
+                                    <input name="add_creation" type="submit">
+                            </form>
                         </div>
 
 
