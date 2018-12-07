@@ -1,0 +1,3 @@
+2=Haricot=beans.jpg=18/10/2018=35=12/10/2018=Tous les jours=02/10/2018= RAS
+3=Poireau=leek.jpg=12/10/2018=15=12/10/2018=Tous les jours=03/10/2018= RAS
+4=Salade=salad.jpg=14/10/2018=25=12/10/2018=Tous les jours=05/10/2018= RAS
