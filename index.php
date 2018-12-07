@@ -160,7 +160,6 @@
                                 </table>
                           </div>               
 
-<<<<<<< HEAD
 
 
 
@@ -258,83 +257,8 @@
                           <div id="del_part" class="tab-pane fade" class="tab-resize">
                                <table id='delete_tab'>
                                     <thead>
-=======
-                      <div id="home_part" class="tab-pane fade in active">
-                            <table id="home_tab" class="tab-resize">
-                                <thead>
                                       <tr>
-                                        <th class="table_title_id">id</th>
-                                        <th class="table_title_nom">Nom</th>
-                                        <th class="table_title_photo">Photo</th>
-                                        <th class="table_title_plantation">Date<br>Plantation</th>
-                                        <th class="table_title_notes">Quantité<br>Planté</th>
-                                        <th class="table_title_arrosage">Récolte<br>Estimé</th>
-                                        <th class="table_title_frequence">Fréquence<br>d'Arrosage</th>
-                                        <th class="table_title_quantite">Dernier<br>Arrosage</th>
-                                        <th class="table_title_recolte">Commentaire</th>
-                                      </tr>
-                                </thead>
-
-                                <tbody>
-                                    <?php include('view-treatement.php');?>
-                                </tbody>
-                            </table>
-                      </div>
-
-                      <div id="add_part" class="tab-pane fade">
-                        <form action="traitement_add.php" method="post"  enctype="multipart/form-data">           
-                                <fieldset>
-                                    <legend>Classification</legend>
-                                    <label for="nom" title="champs requis">* Nouvelle entrée :</label>
-                                        <input type="text" name="nom" id="nom"><br>
-
-                                    <label for="categorie" title="champs requis">* Catégorie :</label>
-                                        <select name="catégorie" id="categorie">
-                                            <option value="legumes">Légumes</option>
-                                            <option value="fruits">Fruits</option>
-                                            <option value="plantes">Plantes</option>
-                                        </select><br>
-<!-- 
-                                    <label for="image">Ajouter une photo :</label>
-                                        <input type="texte" name="image" id="image"><br> -->
-                                        <label for="image">Ajouter une photo :</label>
-                                        <input type="file" name="file_img" id="image"/><br>
-                                </fieldset>
-
-                                <fieldset>
-                                    <legend>Informations</legend>   
-
-                                    <label for="plantation">Date de plantation :</label>
-                                        <input type="date" name="plantation" id="plantation"><br>
-
-                                    <label for="recolte">Date de récolte estimée :</label>
-                                        <input type="date" name="recolte" id="recolte"><br>                    
-
-                                    <label for="quantite">Quantité plantée :</label>
-                                        <input type="number" name="quantite" id="quantite" min=0 ><br>
-
-                                    <label for="frequence">Fréquence d'arrosage :</label>
-                                        <input type="text" name="frequence" id="frequence"><br>
-
-                                    <label for="arrosage">Dernier arrosage :</label>
-                                        <input type="date" name="arrosage" id="arrosage"><br>
-                                </fieldset>
-                                <fieldset>
-                                    <legend>Commentaires</legend>
-
-                                    <textarea name="notes" id="notes"></textarea><br>
-                                </fieldset>
-
-                                    <p>Les champs portant une * doivent être renseignés !</p>
-                                    <input name="add_creation" type="submit">
-                            </form>
-                      </div>
-
-                      <div id="modify_part" class="tab-pane fade" class="tab-resize">
-                            <table id="modify_tab">
-                                <thead>
->>>>>>> 7e2b88c17bb772cb6504033b5d1fb541edfe7c21
-                                      <tr>
+                                        <th class="table_title_delete"></th>
                                         <th class="table_title_id">id</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
@@ -345,40 +269,7 @@
                                         <th class="table_title_quantite">Dernier<br>Arrosage</th>
                                         <th class="table_title_recolte">Commentaires</th>
                                       </tr>
-<<<<<<< HEAD
                                     </thead>
-=======
-                                </thead>
-
-                                <tbody>
-                                    <?php include('view-treatement.php');?>
-                                </tbody>
-                            </table>
-                      </div>
-
-                      <div id="del_part" class="tab-pane fade" class="tab-resize">
-                           <table id='delete_tab'>
-                                <thead>
-                                  <tr>
-                                    <th class="table_title_delete"></th>
-                                    <th class="table_title_id">id</th>
-                                    <th class="table_title_nom">Nom</th>
-                                    <th class="table_title_photo">Photo</th>
-                                    <th class="table_title_plantation">Date<br>Plantation</th>
-                                    <th class="table_title_notes">Quantité<br>Planté</th>
-                                    <th class="table_title_arrosage">Récolte<br>Estimé</th>
-                                    <th class="table_title_frequence">Fréquence<br>d'Arrosage</th>
-                                    <th class="table_title_quantite">Dernier<br>Arrosage</th>
-                                    <th class="table_title_recolte">Commentaires</th>
-                                  </tr>
-                                </thead>
-
-                                <tbody>
-                                    <?php include('delete.php'); ?>
-                                </tbody>
-                           </table>
-                      </div>
->>>>>>> 7e2b88c17bb772cb6504033b5d1fb541edfe7c21
 
                                     <tbody>
 
