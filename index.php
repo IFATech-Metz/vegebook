@@ -166,7 +166,7 @@
                             <!--                ajouter éléments-->                               
 
                         <div id="add_part" class="tab-pane fade">
-                            <form action=" " method="post">           
+                            <form action="traitement_add.php" method="post">           
                                     <fieldset>
                                         <legend>Classification</legend>
                                         <label for="nom" title="champs requis">* Nouvelle entrée :</label>
