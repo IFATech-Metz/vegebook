@@ -106,7 +106,6 @@
 
                     $nbr_inve ++;
 
-
                 }
 
 
@@ -127,15 +126,12 @@
                             'id' => $parts[0],
                             'name' => $parts[1],
                             'img' => $parts[2],
-                            // 'name_fr' => $parts[3],
                             'plantation' => $parts[3],
                             'quantite' => $parts[4],
                             'estimation' => $parts[5],
                             'freq_arrosage' => $parts[6],
                             'dernier_arrosage' => $parts[7],
                             'notes' => $parts[8]);
-
-
                             }
 
                 fclose($file_handle);

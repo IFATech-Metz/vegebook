@@ -44,7 +44,6 @@
          		'id' => $parts[0],
          		'name' => $parts[1],
          		'img' => $parts[2],
-         		// 'name_fr' => $parts[3],
          		'plantation' => $parts[3],
          		'quantite' => $parts[4],
          		'estimation' => $parts[5],
@@ -64,9 +63,9 @@ for ($i=0; $i < $nbr_inve ; $i++) {
 	 	echo 
             '<td>'  . $elements[$i]['id'] . '</td>' .
             '<td>'  . $elements[$i]['name'] . '</td>' .
-             '<td> ' . '<img class="content_img" src="images/' . $elements[$i]['img'] . '"/>' . '</td>' .
-             '<td> ' . $elements[$i]['plantation'] . '</td>' .
-             '<td> ' . $elements[$i]['quantite'] . '</td>' .
+            '<td> ' . '<img class="content_img" src="images/' . $elements[$i]['img'] . '"/>' . '</td>' .
+            '<td> ' . $elements[$i]['plantation'] . '</td>' .
+            '<td> ' . $elements[$i]['quantite'] . '</td>' .
 			'<td>  ' . $elements[$i]['estimation'] . '</td>' .
 			'<td>  ' . $elements[$i]['freq_arrosage'] . '</td>' .
 			'<td>  ' . $elements[$i]['dernier_arrosage'] . '</td>' .
