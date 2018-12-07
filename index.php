@@ -66,7 +66,7 @@
             <nav id="menu">
                 <ul>
                     <li><a href='index.php'>Accueil</a></li>
-                    <li><a href='index.php?type=all'>Tous</a></li>
+                    <li><a href='index.php?type=all&status=view'>Tous</a></li>
                     <li><a href='index.php?type=fruits&status=view'>Fruits</a></li>
                     <li><a href='index.php?type=legumes&status=view'>Légumes</a></li>
                     <li><a href='index.php?type=plantes&status=view'>Plantes</a></li>
@@ -155,7 +155,20 @@
                                     </thead>
 
                                     <tbody>
-                                        <?php include('view-item.php');?>
+                                        <?php 
+                                            if(isset($_GET['type']) && $_GET['type'] != 'all'){
+                                                include('view-item.php');
+
+                                            }
+                                            if(isset($_GET['type']) && $_GET['type'] == 'all'){
+                                               
+                                                include('view_all.php');
+
+                                            }
+                                            
+                                        
+                                        
+                                        ?>
                                     </tbody>
                                 </table>
                           </div>               

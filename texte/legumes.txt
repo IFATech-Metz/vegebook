@@ -1,3 +1,10 @@
-1=Haricot=beans.jpg=12/10/2018=18/10/2018=35=4=Tous les jours=02/10/2018= RAS
-2=Salade=salad.jpg=10/10/2018=14/10/2018=25=10=Tous les jours=05/10/2018= RAS
-4=tomate=salad.jpg=10/10/2018=24/10/2018=25=10=Tous les jours=05/10/2018= RAS
+1=Haricot=beans.jpg=18/10/2018=35=04/12/2018=Tous les jours=02/10/2018= RAS
+2=Poireau=leek.jpg=12/10/2018=15=04/12/2018=Tous les jours=03/10/2018= RAS
+3=Salade=salad.jpg=14/10/2018=25=04/12/2018=Tous les jours=05/10/2018= RAS
+4=Carotte=carottes.jpg=04/12/2018=20=04/12/2018=Tous les jours=04/12/2018= RAS
+5=Choux-Fleur=choux-fleur.jpg=04/12/2018=5=04/12/2018=Tous les jours=04/12/2018= RAS
+6=Courgette=courgettes.jpg=04/12/2018=10=04/12/2018=Tous les jours=04/12/2018= RAS
+7=Navet=navet.jpg=04/12/2018=10=04/12/2018=Tous les jours=04/12/2018= RAS
+8=Pomme de Terre=pdt.jpg=04/12/2018=20=04/12/2018=Tous les jours=04/12/2018= RAS
+9=Potiron=potiron.jpg=04/12/2018=5=04/12/2018=Tous les jours=04/12/2018= RAS
+10=Radis=radis.jpg=04/12/2018=15=04/12/2018=Tous les jours=04/12/2018= RAS

@@ -17,13 +17,14 @@
 
             $line_of_text = fgets($file_handle);
 
-
+            
             $parts = explode('=', $line_of_text);
 
+           
 
             $elements[] = /*array($parts[1] =>*/
              array(	
-                    'id' => $nbr_inve ++,
+                    'id' => $nbr_inve++,
                     'name' => $parts[1],
                     'img' => $parts[2],
                     'plantation' => $parts[3],
@@ -33,7 +34,6 @@
                     'dernier_arrosage' => $parts[7],
                     'notes' => $parts[8]);
                     }
-
 
 
 
