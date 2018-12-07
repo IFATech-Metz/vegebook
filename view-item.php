@@ -26,7 +26,6 @@
                     'id' => $nbr_inve ++,
                     'name' => $parts[1],
                     'img' => $parts[2],
-                    // 'name_fr' => $parts[3],
                     'plantation' => $parts[3],
                     'quantite' => $parts[4],
                     'estimation' => $parts[5],
