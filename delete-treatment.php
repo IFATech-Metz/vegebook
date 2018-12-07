@@ -22,8 +22,12 @@
 
             }
 
+<<<<<<< HEAD
 
             $file_handle = fopen("texte/$type.txt", "r");
+=======
+                }
+>>>>>>> 7e2b88c17bb772cb6504033b5d1fb541edfe7c21
 
             while(!feof($file_handle)) {
 
@@ -50,10 +54,25 @@
                         'notes' => $parts[9]);
 
 
+<<<<<<< HEAD
                         }
 
             fclose($file_handle);
 
+=======
+                    $elements[] = /*array($parts[1] =>*/
+                     array(	
+                            'id' => $parts[0],
+                            'name' => $parts[1],
+                            'img' => $parts[2],
+                            'plantation' => $parts[3],
+                            'quantite' => $parts[4],
+                            'estimation' => $parts[5],
+                            'freq_arrosage' => $parts[6],
+                            'dernier_arrosage' => $parts[7],
+                            'notes' => $parts[8]);
+                            }
+>>>>>>> 7e2b88c17bb772cb6504033b5d1fb541edfe7c21
 
 
         unlink("texte/$type.txt");   //suppression du fichier txt contenant les infos avant suppression
