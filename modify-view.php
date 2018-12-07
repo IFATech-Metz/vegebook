@@ -53,10 +53,10 @@
 
 
 
-for ($i=0; $i < $nbr_inve ; $i++) { 
+for ($i=1; $i < $nbr_inve ; $i++) { 
 	 	echo 
-            '<tr><td><a href="delete-confirmation.php?id='.$i.'&name='.$elements[$i]['name'].'&date='.$elements[$i]['plantation'].'&type='.$type_txt.'"> 
-    <img src="images/ressources/cancel.png" class="image_delete_input"></a></td>' .
+            '<tr><td><a href="index.php?id='.$i.'&type='.$type_txt.'&status=modify"> 
+            <img src="images/ressources/edit.png" class="image_delete_input"></a></td>' .
 //            '<tr><td><form method="post" action="delete-traitement.php"> 
 //    <input  name="id" value="'.$i.'"> 
 //    <input class="image_supprimer_input" type="image" src="images/ressources/cancel.png"></form>            </td>' .

@@ -5,6 +5,7 @@
     padding: 0px;
     text-decoration:none;
 }
+
 body a 
 {
     color:inherit; 
@@ -14,7 +15,8 @@ body a
 .wrapper
 {
     margin: 0 auto;
-    width: 1300px;
+    width: 100%;
+    height: auto;
    
 }
 
@@ -42,7 +44,7 @@ header
 header #header_title
 {
     display: flex; 
-    width: 2200px;
+    width: 100%;
     height: 170px;
     flex-direction: row;  
     
@@ -118,27 +120,32 @@ nav li:last-child a
 
 
 
-/************ MAIN ********/
+/************ home message section ********/
 
-#main
+#home-message
 {
     text-align: center;
+    font-family: 'Roboto', sans-serif; 
+    margin-top: 20vh;
+    margin-bottom: 200px;
+}
+
+#home-message p
+{
+    margin-top: 5vh;
+    font-size: 2.2vh;
+}
+
+/************ element content section ********/
+#element-content-section
+{
+    width : 1150px;
+    margin: auto;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*
 #content
 
 {
@@ -159,20 +166,7 @@ height: 500px;
     margin-top: 50px;
 
 }
-
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-     text-align: center;
-   
-}
+*/
 
 
 /*
@@ -211,6 +205,22 @@ table img
     
 }
 
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+     text-align: center;
+   
+}
 
 .table_title_delete
 {
@@ -270,20 +280,45 @@ text-align: center;
 
 #tableau
 {
-width: 1500px;
-margin-top: 80px;
-margin-left: 70px;  
-}
-#tab-section
-{
-    margin-top: 60px;
+    width: 1500px;
+    margin-top: 80px;
+    margin-left: 70px;  
 }
 
-#tab-section h1
+
+
+
+/*element-content-section*/
+
+#title-content-section
 {
-   color: red;
     text-align: center;
+    margin-top: 10vh;
 }
+
+#title-content-section p
+{
+    color: black;
+    text-align: center;
+    font-family: 'Mystery Quest', cursive;
+    font-size : 3vh;
+    margin-top: 2vh;
+}
+
+#element-content-section
+{
+    margin-top: 30px;
+}
+
+
+#element-content-section h1 img
+{
+    height : 50px;
+    margin-bottom: 15px;
+}
+
+
+
 
 /*configuration tableau*/
 label
@@ -296,10 +331,12 @@ label
     margin: 0px 0px 0px 0px;
 }
 
+
 .dataTables_info
 {
     margin: 10px 0px 0px 0px;
 }
+
 
 .dataTables_paginate 
 {
@@ -315,22 +352,56 @@ height: 15px;
 
 
 
+/*delete-confirmation section*/
 
-.delete-confirmation
+
+#delete-confirmation
 {
     margin-top: 100px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
-.delete-confirmation h1
+#confirmation-delete-question
 {
-
-    font-size: 20px;
-
+    font-size: 2.5vh;
 }
 
 
+#delete-confirmation h1
+{
+    font-family: 'Roboto', sans-serif; 
+    font-size: 20px;
+}
+#confirmation-choice
+{
+    width:550px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 50px;   
+}
+#yes-confirm
+{
+  
+    margin: auto;
+}
+#yes-confirm:hover
+{
+    color: green;
+    font-weight: bold;
+}
+
+#no-confirm
+{
+    
+    margin: auto;
+}
+#no-confirm:hover
+{
+    color: red;
+    font-weight: bold;
+}
 
 .glyph1
 {
@@ -361,7 +432,6 @@ color: blue;
 }
 
 
-
 .image_delete_input
 {
 width: 20px;
@@ -370,8 +440,25 @@ width: 20px;
 
 .image_delete_input:hover
 
+{  
+    transform: scale(1.5);  
+}
+
+
+/*delete treamtment section */
+
+#delete-treatement
 {
     
-    transform: scale(1.5);
-    
+    font-family: 'Roboto', sans-serif; 
+    text-align: center;
+    margin: auto;
+
 }
+
+
+#container-content-section
+{
+    margin-bottom: 100px;   
+}
+
