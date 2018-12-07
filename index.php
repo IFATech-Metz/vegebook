@@ -58,7 +58,8 @@
         <header>
                 <div id="header_title">
                     <img id="header-img" src="images/ressources/books2.png">
-                    <h1>vegebook</h1>
+                    <h1>vegebook </h1>
+                    
                 </div>
         </header>
         
