@@ -52,9 +52,9 @@
                 echo 
                     '<td>'  . $elements[$i]['id'] . '</td>' .
                     '<td>'  . $elements[$i]['name'] . '</td>' .
-                     '<td> ' . '<img class="content_img" src="images/' . $elements[$i]['img'] . '"/>' . '</td>' .
-                     '<td> ' . $elements[$i]['plantation'] . '</td>' .
-                     '<td> ' . $elements[$i]['quantite'] . '</td>' .
+                    '<td> ' . '<img class="content_img" src="images/' . $elements[$i]['img'] . '"/>' . '</td>' .
+                    '<td> ' . $elements[$i]['plantation'] . '</td>' .
+                    '<td> ' . $elements[$i]['quantite'] . '</td>' .
                     '<td>  ' . $elements[$i]['estimation'] . '</td>' .
                     '<td>  ' . $elements[$i]['freq_arrosage'] . '</td>' .
                     '<td>  ' . $elements[$i]['dernier_arrosage'] . '</td>' .

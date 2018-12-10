@@ -17,13 +17,13 @@
     $file_handle = fopen("texte/legumes.txt", "r");
 
 
-
     while(!feof($file_handle)) {
         
 
         $line_of_text = fgets($file_handle);
         
         $parts = explode('=', $line_of_text);
+        
         
 
         $elements[] = /*array($parts[1] =>*/
@@ -45,7 +45,7 @@
 /******* fichier fruits.txt ********/
 
 
-    $nbr_inve_1 = $nbr_inve; //    compteur de ligne dans le txt
+    $nbr_inve_1 = 0; //    compteur de ligne dans le txt
 
     $file_handle = fopen("texte/fruits.txt", "r");
 
@@ -56,7 +56,6 @@
         $line_of_text = fgets($file_handle);
         
         $parts = explode('=', $line_of_text);
-        
         
 
         $elements_1[] = /*array($parts[1] =>*/
@@ -71,14 +70,15 @@
          		'dernier_arrosage' => $parts[7],
                 'notes' => $parts[8]);
                 }
-  
+
+
     fclose($file_handle);
 
 
 /******* fichier plantes.txt ********/
 
 
-    $nbr_inve_2 = $nbr_inve_1; //    compteur de ligne dans le txt
+    $nbr_inve_2 = 0; //    compteur de ligne dans le txt
 
     $file_handle = fopen("texte/plantes.txt", "r");
 
@@ -107,33 +107,69 @@
   
     fclose($file_handle);
 
-
-    $elements_total = array_merge($elements, $elements_1, $elements_2);
-
-    /*echo "<pre>";
-    print_r($elements_total);
-    echo "</pre>";*/
+    
 
 
 /******* affichage de tous les éléments ********/
 
+    for ($i=1; $i < $nbr_inve ; $i++) { 
 
+            if($i < 10){
+            $elements[$i]['id'] = "0" . $elements[$i]['id'];
+            }
 
-for ($i=1; $i < $nbr_inve_2 ; $i++) { 
-	 	echo 
-            '<td>'  . $elements_total[$i]['id'] . '</td>' .
-            '<td>'  . $elements_total[$i]['name'] . '</td>' .
-            '<td> ' . '<img class="content_img" src="images/' . $elements_total[$i]['img'] . '"/>' . '</td>' .
-            '<td> ' . $elements_total[$i]['plantation'] . '</td>' .
-            '<td> ' . $elements_total[$i]['quantite'] . '</td>' .
-			'<td>  ' . $elements_total[$i]['estimation'] . '</td>' .
-			'<td>  ' . $elements_total[$i]['freq_arrosage'] . '</td>' .
-			'<td>  ' . $elements_total[$i]['dernier_arrosage'] . '</td>' .
-			'<td>  ' . $elements_total[$i]['notes'] . '</td></tr>'
-            
-	;
-}
+    	 	echo 
+                '<td>' . "L". $elements[$i]['id'] . '</td>' .
+                '<td>' . $elements[$i]['name'] . '</td>' .
+                '<td>' . '<img class="content_img" src="images/' . $elements[$i]['img'] . '"/>' . '</td>' .
+                '<td>' . $elements[$i]['plantation'] . '</td>' .
+                '<td>' . $elements[$i]['quantite'] . '</td>' .
+    			'<td>' . $elements[$i]['estimation'] . '</td>' .
+    			'<td>' . $elements[$i]['freq_arrosage'] . '</td>' .
+    			'<td>' . $elements[$i]['dernier_arrosage'] . '</td>' .
+                '<td>' . $elements[$i]['notes'] . '</td></tr>'
+                ;
 
+    }
 
+    for ($i=1; $i < $nbr_inve_1 ; $i++) { 
+
+            if($i < 10){
+            $elements_1[$i]['id'] = "0" . $elements_1[$i]['id'];
+            }
+
+    	 	echo 
+                '<td>' . "F" . $elements_1[$i]['id'] . '</td>' .
+                '<td>' . $elements_1[$i]['name'] . '</td>' .
+                '<td>' . '<img class="content_img" src="images/' . $elements_1[$i]['img'] . '"/>' . '</td>' .
+                '<td>' . $elements_1[$i]['plantation'] . '</td>' .
+                '<td>' . $elements_1[$i]['quantite'] . '</td>' .
+    			'<td>' . $elements_1[$i]['estimation'] . '</td>' .
+    			'<td>' . $elements_1[$i]['freq_arrosage'] . '</td>' .
+    			'<td>' . $elements_1[$i]['dernier_arrosage'] . '</td>' .
+                '<td>' . $elements_1[$i]['notes'] . '</td></tr>'
+                ;
+
+    }
+
+    for ($i=1; $i < $nbr_inve_2 ; $i++) { 
+
+            if($i < 10){
+            $elements_2[$i]['id'] = "0" . $elements_2[$i]['id'];
+            }
+
+    	 	echo 
+                '<td>' . "P" . $elements_2[$i]['id'] .'</td>' .
+                '<td>' . $elements_2[$i]['name'] . '</td>' .
+                '<td>' . '<img class="content_img" src="images/' . $elements_2[$i]['img'] . '"/>' . '</td>' .
+                '<td>' . $elements_2[$i]['plantation'] . '</td>' .
+                '<td>' . $elements_2[$i]['quantite'] . '</td>' .
+    			'<td>' . $elements_2[$i]['estimation'] . '</td>' .
+    			'<td>' . $elements_2[$i]['freq_arrosage'] . '</td>' .
+    			'<td>' . $elements_2[$i]['dernier_arrosage'] . '</td>' .
+                '<td>' . $elements_2[$i]['notes'] . '</td></tr>'
+                ;
+
+    }
 
 ?>

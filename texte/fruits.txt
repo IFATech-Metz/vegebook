@@ -1,3 +1,4 @@
+0=nom=img=date=nbre=date=txt=date=txt
 1=Poire=poires.jpg=04/12/2018=2=04/12/2018=Tous les jours=04/06/2019= RAS
 2=Pomme=pommes.jpg=04/12/2018=2=04/12/2018=Tous les jours=04/06/2019= RAS
 3=Quetsche=quetsche.jpg=04/12/2018=2=04/12/2018=Tous les jours=04/06/2019= RAS
