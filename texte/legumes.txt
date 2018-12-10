@@ -1,3 +1,3 @@
-1=Haricot=beans.jpg=12/10/2018=18/10/2018=35=4=Tous les jours=02/10/2018= RAS
-2=Salade=salad.jpg=10/10/2018=14/10/2018=25=10=Tous les jours=05/10/2018= RAS
-4=tomate=salad.jpg=10/10/2018=24/10/2018=25=10=Tous les jours=05/10/2018= RAS
+1=element=photo=dateplantation=quantite=recole=frequence=dernierarrosage=commentaire
+2=Cerise=cerises.jpg=04/12/2018=04/12/2018=10=Tous les jours=04/06/2019= RAS
+3=Mirabelle=mirabelles.jpg=04/12/2018=04/12/2018=7=Tous les jours=04/06/2019= RAS4=Rhubarbe411=rhubarbe.jpg=2018-12-02=4=2018-12-02=sdsdsd=2018-12-29=fdfdfdfd

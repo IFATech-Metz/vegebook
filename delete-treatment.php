@@ -1,7 +1,7 @@
 
  <section id="delete-treatment">
+     
     <?php 
-
 
         $id = $_GET['id'];
         $name = $_GET['name'];
@@ -9,92 +9,73 @@
         $type = $_GET['type'];
 
 
-           $nbr_inve = 0;
+            $count = 1;
 
             $file_handle = fopen("texte/$type.txt", "r");
 
             while(!feof($file_handle)) {
 
-                fgets($file_handle);
-
-                $nbr_inve ++;
-
-
-            }
-
-
-            $file_handle = fopen("texte/$type.txt", "r");
-
-            while(!feof($file_handle)) {
-
+                
 
                 $line_of_text = fgets($file_handle);
 
-
                 $parts = explode('=', $line_of_text);
 
-
-
-                $elements[] = /*array($parts[1] =>*/
-                    
+                $array[] = 
                  array(	
                         'id' => $parts[0],
                         'name' => $parts[1],
                         'img' => $parts[2],
-                        'name_fr' => $parts[3],
-                        'plantation' => $parts[4],
-                        'quantite' => $parts[5],
-                        'estimation' => $parts[6],
-                        'freq_arrosage' => $parts[7],
-                        'dernier_arrosage' => $parts[8],
-                        'notes' => $parts[9]);
-
-
-                        }
+                        'plantation' => $parts[3],
+                        'quantite' => $parts[4],
+                        'estimation' => $parts[5],
+                        'freq_arrosage' => $parts[6],
+                        'dernier_arrosage' => $parts[7],
+                        'notes' => $parts[8]);
+                       
+                
+                 $count++;
+             }
 
             fclose($file_handle);
 
 
+            unset($array[$id]); 
 
-        unlink("texte/$type.txt");   //suppression du fichier txt contenant les infos avant suppression
-        fopen("texte/$type.txt", "w+"); //création d'un nouveau fichier texte
+            $array = array_values($array);
 
+            for ($i=0; $i < $count-2; $i++) {
 
-
-
-
-
-    //    for($i=0; $i>$nbr_inve; $i++){
-    //        $elements[$i];    
-    //    }
-
-        unset($elements["$id"]);
-
-                echo '<pre>';
-                print_r($elements);
-                echo '<pre>';
-
-
-
-        $elements = array_values($elements);
-
-
-
-
-        //echo implode("=", $elements[1]);
-
-
-        $file_handle = fopen("texte/$type.txt", "a");
-
-        for($i=0; $i<$nbr_inve-1; $i++){
-            
-            if($i == ($nbr_inve-1)){
-                $file_content = rtrim($file_content);
+                 $array_2[] = array('id' => $i+1, 
+                        'name' => $array[$i]['name'],
+                        'img' => $array[$i]['img'],
+                        'plantation' => $array[$i]['plantation'],
+                        'quantite' => $array[$i]['quantite'],
+                        'estimation' => $array[$i]['estimation'],
+                        'freq_arrosage' => $array[$i]['freq_arrosage'],
+                        'dernier_arrosage' => $array[$i]['dernier_arrosage'],
+                        'notes' => $array[$i]['notes']);
             }
-            
-          $file_content = implode("=", $elements[$i]);
-          fwrite($file_handle, $file_content);
-        }
+
+
+            $file_handle2 = fopen("texte/$type.txt", 'w'); 
+
+            for($i=0; $i<$count-2; $i++){
+            $file_content2 = implode('=', $array_2[$i]);
+
+            if($i==($count-3)) {
+      			$file_content2 = rtrim($file_content2);
+   			 }
+            fwrite($file_handle2, $file_content2);
+            }
+
+            fclose($file_handle2); 
+
+
+
+
+
+
 
         ?>
 
@@ -110,7 +91,6 @@
 
 
 </section>
-     
 
-    
- 
+
+
