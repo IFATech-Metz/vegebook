@@ -169,47 +169,44 @@
                              <form action="traitement_add.php" method="post"  enctype="multipart/form-data">           
                                 <fieldset>
                                     <legend>Classification</legend>
-                                    <label for="nom" title="champs requis">* Nouvelle entrée :</label>
-                                        <input type="text" name="nom" id="nom"><br>
+                                    <label for="nom" title="champs requis">Nouvelle entrée :</label>
+                                        <input type="text" name="nom" id="nom" required><br>
 
-                                    <label for="categorie" title="champs requis">* Catégorie :</label>
-                                        <select name="catégorie" id="categorie">
+                                    <label for="categorie" title="champs requis">Catégorie :</label>
+                                        <select name="catégorie" id="categorie" required>
                                             <option value="legumes">Légumes</option>
                                             <option value="fruits">Fruits</option>
                                             <option value="plantes">Plantes</option>
                                         </select><br>
-<!-- 
-                                    <label for="image">Ajouter une photo :</label>
-                                        <input type="texte" name="image" id="image"><br> -->
                                         <label for="image">Ajouter une photo :</label>
-                                        <input type="file" name="file_img" id="image"/><br>
+                                        <input type="file" name="file_img" id="image" required /><br>
                                 </fieldset>
 
                                 <fieldset>
                                     <legend>Informations</legend>   
 
                                     <label for="plantation">Date de plantation :</label>
-                                        <input type="date" name="plantation" id="plantation"><br>
+                                        <input type="date" name="plantation" id="plantation" required><br>
 
                                     <label for="recolte">Date de récolte estimée :</label>
-                                        <input type="date" name="recolte" id="recolte"><br>                    
+                                        <input type="date" name="recolte" id="recolte" required><br>                    
 
                                     <label for="quantite">Quantité plantée :</label>
-                                        <input type="number" name="quantite" id="quantite" min=0 ><br>
+                                        <input type="number" name="quantite" id="quantite" min=0 required ><br>
 
                                     <label for="frequence">Fréquence d'arrosage :</label>
-                                        <input type="text" name="frequence" id="frequence"><br>
+                                        <input type="text" name="frequence" id="frequence" required><br>
 
                                     <label for="arrosage">Dernier arrosage :</label>
-                                        <input type="date" name="arrosage" id="arrosage"><br>
+                                        <input type="date" name="arrosage" id="arrosage" required><br>
                                 </fieldset>
                                 <fieldset>
                                     <legend>Commentaires</legend>
 
-                                    <textarea name="notes" id="notes"></textarea><br>
+                                    <textarea name="notes" id="notes" required></textarea><br>
                                 </fieldset>
 
-                                    <p>Les champs portant une * doivent être renseignés !</p>
+                                    <p>Tous les champs sont obligatoires</p>
                                     <input name="add_creation" type="submit">
                             </form>
                         </div>
@@ -318,6 +315,12 @@
                                 <h1>Bienvenue chez Vegebook, votre jardin connecté !</h1>
                                 <p>La gestion de votre jardin devient un jeu d'enfant :
                     Date de plantation, quantité planté, fréquence d'arrosage, ect... sont autant de paramètres qu'il sera possible de suivre afin de surveiller votre jardin pour optimiser son rendement.</p>
+
+                        <p>Pour l'utilisation de votre vegebook, rien de plus simple.<br>
+                            <b>Première étape:</b> Choisir sa catégorie (Tous, Fruits, Légumes ou Plantes),<br>
+                            <b>Deuxième étape:</b> Ajouter/Modifier ou supprimer une ligne depuis le tableau,<br>
+                            <b>Troisième étape:</b> Surveiller et mettre à jour régulièrement votre book.<br><br>
+                        Et voilà, c'est terminé, rien de plus simple et de plus rapide que le vegebook ! </p>
 
 
                      </section>

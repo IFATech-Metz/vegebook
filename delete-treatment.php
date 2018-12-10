@@ -1,5 +1,6 @@
 
  <section id="delete-treatment">
+    
     <?php 
 
 
@@ -86,10 +87,10 @@
 
         $file_handle = fopen("texte/$type.txt", "a");
 
-        for($i=0; $i<$nbr_inve-1; $i++){
+        for($i=0; $i<$nbr_inve+1; $i++){
             
-            if($i == ($nbr_inve-1)){
-                $file_content = rtrim($file_content);
+            if($i == ($nbr_inve+1)){
+                $file_content = rtrim("\r\n");
             }
             
           $file_content = implode("=", $elements[$i]);
