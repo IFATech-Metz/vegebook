@@ -1,12 +1,30 @@
 <section id="modify-treatement">    
 
 <?php
+$count_form = 0;
 if(isset($_GET['type']) AND isset($_GET['id']))
 {
+
+            $file_handle_form = fopen("texte/$type.txt", "r");
+
+            while(!feof($file_handle_form)) {
+
+                
+
+                $line_of_text = fgets($file_handle_form);
+
+                $count_form++;
+
+                 
+             }
+
+            fclose($file_handle_form);
+
             $type = $_GET['type'];
             $id = $_GET['id'];
 
-
+if($_GET['id'] <= $count_form)
+{
 if(isset($_POST['submit_modif']))
 	{
 
@@ -151,11 +169,11 @@ if (isset($_FILES['file_img']) AND $_FILES['file_img']['error'] == 0)
                         'freq_arrosage' => $parts[6],
                         'dernier_arrosage' => $parts[7],
                         'notes' => $parts[8]);
+
                  
              }
 
             fclose($file_handle_form);
-
 
     $date_form_plantation = str_replace('/', '-', $array_form[$id-1]['plantation']);
     $date_plantation_form = date('Y-m-d', strtotime($date_form_plantation));
@@ -283,6 +301,7 @@ if (isset($_FILES['file_img']) AND $_FILES['file_img']['error'] == 0)
  
 
 <?php } 
+}
 ?>
 
     

@@ -151,7 +151,7 @@
                             <table id="home_tab" class="tab-resize">
                                 <thead>
                                     <tr id="salut">
-                                        <th class="table_title_id">N°</th>
+                                        <th class="table_title_id">Ligne</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
                                         <th class="table_title_plantation">Date<br>Plantation</th>
@@ -245,7 +245,7 @@
                                 <thead>
                                     <tr>
                                         <th class="table_title_delete"></th>
-                                        <th class="table_title_id">N°</th>
+                                        <th class="table_title_id">Ligne</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
                                         <th class="table_title_plantation">Date<br>Plantation</th>
@@ -282,7 +282,7 @@
                                 <thead>
                                     <tr>
                                         <th class="table_title_delete"></th>
-                                        <th class="table_title_id">N°</th>
+                                        <th class="table_title_id">Ligne</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
                                         <th class="table_title_plantation">Date<br>Plantation</th>
