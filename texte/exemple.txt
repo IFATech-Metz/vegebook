@@ -1,4 +1,0 @@
-1=element=photo=dateplantation=quantite=recole=frequence=dernierarrosage=commentaire
-2=Cerise=cerises.jpg=04/12/2018=04/12/2018=10=Tous les jours=04/06/2019= RAS
-3=Rhubarbe=rhubarbe.jpg=04/12/2018=04/12/2018=8=Tous les jours=04/06/2019= RAS
-4=Mirabelle=mirabelles.jpg=04/12/2018=04/12/2018=7=Tous les jours=04/06/2019= RAS

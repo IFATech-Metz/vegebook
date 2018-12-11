@@ -43,7 +43,7 @@
 
 for ($i=1; $i < $nbr_inve ; $i++) { 
 	 	echo 
-            '<tr><td><a href="index.php?id='.($i+1).'&type='.$type_txt.'&status=modify&status2=noconfirm"> 
+            '<tr><td><a href="index.php?id='.$i.'&type='.$type_txt.'&status=modify"> 
             <img src="images/ressources/edit.png" class="image_delete_input"></a></td>' .
 //            '<tr><td><form method="post" action="delete-traitement.php"> 
 //    <input  name="id" value="'.$i.'"> 

@@ -10,7 +10,7 @@
     ?>
 
     <p id="confirmation-delete-question">
-        Souhaitez-vous vraiment supprimer l'élément <strong> <?php echo $name ?> planté le <?php echo $date ?></strong>, de votre liste de légumes ?
+        Souhaitez-vous vraiment supprimer l'élément <strong> <?php echo $name ?> planté le <?php echo $date ?></strong>, de votre liste de <?php echo $type ?> ?
     </p>
 
 

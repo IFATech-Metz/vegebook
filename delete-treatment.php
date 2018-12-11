@@ -80,13 +80,15 @@
         ?>
 
 
+        <div id="delete-confirmed">
+            
+           <p> L'élément <?php echo $name ?>  planté le <?php echo $date ?> a bien été supprimé ! </p>
 
-       <p> L'élément <?php echo $name ?>  planté le <?php echo $date ?> a bien été supprimé ! </p>
-
-       <a href="index.php?type=<?php echo $type ?>&status=view">
-           <span class="glyph3 glyphicon glyphicon-arrow-left"></span>
-       </a>            
-
+           <a href="index.php?type=<?php echo $type ?>&status=view">
+               <span class="glyph3 glyphicon glyphicon-arrow-left"></span>
+           </a>    
+            
+        </div>
 
 
 

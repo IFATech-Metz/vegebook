@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="modify-treatement">    
 
 <?php
@@ -64,13 +76,13 @@ if (isset($_FILES['file_img']) AND $_FILES['file_img']['error'] == 0)
 	                }
 	                else
 	                {
-	                	echo 'Erreur: Le fichier n\'est pas au bon format (jpg, jpeg, png)';
+	                	echo '<center><p style="margin-top:70px; margin-bottom:30px;">Erreur: Le fichier n\'est pas au bon format (jpg, jpeg, png), l\'ancienne image a été conservée</p></center>';
 	                	$name_file = $_POST['image_name'];
 	                }
 	        }
 	        else
 	        {
-	        	echo 'Fichier trop important';
+	        	echo '<center>Fichier trop important, l\'ancienne image a été conservée</center>';
 	        	$name_file = $_POST['image_name'];
 	        }
 	}
@@ -169,78 +181,113 @@ if (isset($_FILES['file_img']) AND $_FILES['file_img']['error'] == 0)
 
 ?>
 
+     
+        <?php if(isset($_GET['id']) && isset($_GET['type'])  && isset($_GET['status']) && isset($_GET['status2']) && $_GET['status'] == 'modify'  && $_GET['status2'] == 'confirm') { ?>
+    
+    
+            <section id="modify-confirmation">   
+                
+                
+               <p> L'élément <?php echo $name ?>  planté le <?php echo $plantation ?> a bien été modifié ! </p>
 
+               <a href="index.php?type=<?php echo $type ?>&status=view">
+                   <span class="glyph3 glyphicon glyphicon-arrow-left"></span>
+               </a>      
 
+            </section>
+    
+
+    <?php }  ?>
 
 
     <div id="add_part">
-        <form method='POST' action='modify-treatment.php?id=<?php echo $id ?>&type=<?php echo $type ?>&status=modify' enctype="multipart/form-data">           
-            <fieldset>
-                <legend>Classification </legend>
-                <label for="nom" title="champs requis">Nom :</label>
-                <input type="text" name="nom" id="nom"  value="<?php echo $name_input; ?>" required><br>
+        <form method='POST' action='index.php?id=<?php echo $id ?>&type=<?php echo $type ?>&status=modify&status2=confirm' enctype="multipart/form-data">
+            
+            <div class="fieldset-margin">  
+                <fieldset>
+                    <legend>Classification </legend>
+                    <label for="nom" title="champs requis">Nom :</label>
+                    <input type="text" name="nom" id="nom"  value="<?php echo $name_input; ?>" required><br>
 
 
 
-                <label for="categorie" title="champs requis">Catégorie :</label>
-                <select name="categorie" id="categorie" >
-                    <option value="<?php echo $type; ?>" readonly><?php echo $type; ?> </option>
-                </select><br>
 
-                <label for="image">Modifier la photo :</label><br>
-                <img src=" <?php echo "images/$img_input"; ?> ">
-                <input type="hidden" name="image_name" value="<?php echo $img_input; ?>">
-                <center><input type="file" name="file_img" id="image" /></center><br>
+                    
+                    
+                    <label for="categorie" title="champs requis">Catégorie :</label>
+                    <input type="text" name="categorie" id="categorie"  value="<?php echo $type; ?>" disabled><br>
 
-
-
-            </fieldset>
-
-            <fieldset>
+                    <label for="image">Modifier la photo :</label><br>
+                    <img src=" <?php echo "images/$img_input"; ?> ">
+                    <input type="hidden" name="image_name" value="<?php echo $img_input; ?>">
+                    <center><input type="file" name="file_img" id="image" /></center><br>
 
 
-                <legend>Informations</legend>   
 
-                <label for="plantation">Date de plantation :</label>
-                <input type="date" name="plantation" id="plantation" value="<?php echo $plantation_input; ?>"  required>
-
-                <br>
-
-
-                <label for="recolte">Date de récolte estimée :</label>
-                <input type="date" name="recolte" id="recolte" value="<?php echo $estimation_input; ?>" required><br>
+                </fieldset>
+            </div>
+            
+            
+            <div class="fieldset-margin">  
+                <fieldset>
 
 
-                <label for="quantite">Quantité plantée :</label>
-                <input type="number" name="quantite" id="quantite" min=0 value="<?php echo $quantite_input; ?>" required><br>
+                    <legend>Informations</legend>   
+
+                    <label for="plantation">Date de plantation :</label>
+                    <input type="date" name="plantation" id="plantation" value="<?php echo $plantation_input; ?>"  required>
+
+                    <br>
 
 
-                <label for="frequence">Fréquence d'arrosage :</label>
-                <input type="text" name="frequence" id="frequence" value="<?php echo $freq_input; ?>" required><br>
+                    <label for="recolte">Date de récolte estimée :</label>
+                    <input type="date" name="recolte" id="recolte" value="<?php echo $estimation_input; ?>" required><br>
 
 
-                <label for="arrosage">Dernier arrosage :</label>
-                <input type="date" name="arrosage" id="arrosage" value="<?php echo $dernier_input; ?>" required><br>
+                    <label for="quantite">Quantité plantée :</label>
+                    <input type="number" name="quantite" id="quantite" min=0 value="<?php echo $quantite_input; ?>" required><br>
 
 
-            </fieldset>
-            <fieldset>
-                <legend>Commentaires</legend>
-
-                <textarea name="notes" id="notes"required></textarea><br>
-            </fieldset>
+                    <label for="frequence">Fréquence d'arrosage :</label>
+                    <input type="text" name="frequence" id="frequence" value="<?php echo $freq_input; ?>" required><br>
 
 
-            <input type="submit" name="submit_modif">
+                    <label for="arrosage">Dernier arrosage :</label>
+                    <input type="date" name="arrosage" id="arrosage" value="<?php echo $dernier_input; ?>" required><br>
+
+
+                </fieldset>
+            </div>    
+            
+            <div class="fieldset-margin">  
+                
+                <fieldset>
+                    <legend>Commentaires</legend>
+
+                    <textarea name="notes" id="notes"required></textarea><br>
+                </fieldset>
+                
+            </div>
+            <div id="button-modify-form">
+                <a href="index.php?type=<?php echo $type ?>&status=view">
+                    <button id="validate-button" type="button" class="btn btn-danger">Annuler</button>
+                </a> 
+                <button type="submit" name="submit_modif" class="btn btn-success">Valider !</button>
+            </div>
+            
         </form>
 
 
     </div>
 
+ 
 
 <?php } 
 ?>
 
+    
+    
 
 </section>
+
 

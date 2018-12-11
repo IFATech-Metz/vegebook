@@ -79,9 +79,11 @@ header h1
 {
     display: flex;
     justify-content: center; 
+    
 }
 nav ul
 {
+    
     display : flex;
     flex-direction: row;
     list-style-type: none;     
@@ -93,7 +95,7 @@ nav li a
     text-align: center;
     padding: 14px 60px 14px 60px;
     background-color: green;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mystery Quest', cursive;
     color: white;
 /*    font-weight: bold;*/
     font-size: 25px;
@@ -126,7 +128,7 @@ nav li:last-child a
 {
     text-align: center;
     font-family: 'Roboto', sans-serif; 
-    margin-top: 20vh;
+    margin-top: 15vh;
     margin-bottom: 200px;
 }
 
@@ -134,6 +136,10 @@ nav li:last-child a
 {
     margin-top: 5vh;
     font-size: 2.2vh;
+}
+#home-message img
+{
+    margin-bottom: 5vh;
 }
 
 /************ element content section ********/
@@ -471,6 +477,12 @@ width: 20px;
     margin-bottom: 100px;   
 }
 
+#delete-confirmed
+{
+   text-align: center;
+    margin-top: 80px;
+}
+
 
 
 /*overview section*/
@@ -516,12 +528,37 @@ width: 20px;
 }
 #img-overview
 {
-    width: 250px;
+    width: 180px;
     margin-top: 5vh;
     margin-bottom: 5vh;
     border-radius:15px 50px; 
     border: solid 1px black;
    box-shadow: 10px 10px 20px grey;
     
+}
+
+
+
+
+
+#add_part img
+{
+    
+    width : 165px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    margin-left: 30px;
+    border: solid black 1px;
+}
+
+
+
+/*modify confirmation*/
+
+#modify-confirmation
+{
+    
+    text-align: center;
+    margin-top: 10px;
 }
 

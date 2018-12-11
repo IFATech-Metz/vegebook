@@ -76,7 +76,6 @@
             <nav id="menu">
                 <ul>
                     <li><a href='index.php'>Accueil</a></li>
-                    <li><a href='index.php?type=all'>Tous</a></li>
                     <li><a href='index.php?type=fruits&status=view'>Fruits</a></li>
                     <li><a href='index.php?type=legumes&status=view'>Légumes</a></li>
                     <li><a href='index.php?type=plantes&status=view'>Plantes</a></li>
@@ -94,7 +93,7 @@
             <section id="title-content-section"> 
 
 
-                <?php  if(isset($_GET['type'])){ ?>
+                <?php  if(isset($_GET['type']) && $_GET['type'] != 'add'){ ?>
 
                 <?php $type = $_GET['type']; ?>
 
@@ -137,7 +136,7 @@
                     <?php if(isset($_GET['type']) && isset($_GET['status']) && ($_GET['status'] == 'view' OR $_GET['status'] == 'overview')) { ?>
 
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#home_part">Mes Légumes</a></li>
+                        <li class="active"><a data-toggle="tab" href="#home_part">Mes <?php echo $type ?></a></li>
                         <li><a data-toggle="tab" href="#modify_part">Modifier</a></li>
                         <li><a data-toggle="tab" href="#add_part">Ajouter</a></li>
                         <li><a data-toggle="tab" href="#del_part">Supprimer</a></li>
@@ -156,8 +155,8 @@
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
                                         <th class="table_title_plantation">Date<br>Plantation</th>
-                                        <th class="table_title_notes">Date<br>Récolte</th>
-                                        <th class="table_title_arrosage">Quantité<br>Planté</th>
+                                        <th class="table_title_notes">Quantité<br>Planté</th>
+                                        <th class="table_title_arrosage">Date<br>Récolte</th>
                                         <th class="table_title_frequence">Fréquence<br>d'Arrosage</th>
                                         <th class="table_title_quantite">Dernier<br>Arrosage</th>
                                         <th class="table_title_recolte">Commentaire</th>
@@ -181,7 +180,7 @@
                         <!--                ajouter éléments-->                               
 
                         <div id="add_part" class="tab-pane fade">
-                            <form action="traitement_add.php" method="post"  enctype="multipart/form-data">           
+                            <form action="index.php?status=added&type=add" method="post" enctype="multipart/form-data">           
                                 <fieldset>
                                     <legend>Classification</legend>
                                     <label for="nom" title="champs requis">Nouvelle entrée :</label>
@@ -191,11 +190,11 @@
                                     <select name="catégorie" id="categorie"  required>
                                         <option value="legumes">Légumes</option>
                                         <option value="fruits">Fruits</option>
-                                        <option value="aromatiques">Plantes</option>
+                                        <option value="plantes">Plantes</option>
                                     </select><br>
 
                                     <label for="image">Ajouter une photo :</label>
-                                        <input type="file" name="file_img" id="image" required/><br>
+                                        <input type="file" name="file_img" id="image"  required/><br>
                                 </fieldset>
 
                                 <fieldset>
@@ -222,8 +221,17 @@
                                     <textarea name="notes" id="notes"  required></textarea><br>
                                 </fieldset>
 
-                                <p>Tous les champs sont obligatoires</p>
-                                <input type="submit" name="add_creation">
+                                <p style="text-align:center">* Tous les champs sont obligatoires</p>
+<!--                                <input type="submit" name="add_creation">-->
+                                
+                                
+                                <div id="button-modify-form">
+                                    <a href="index.php?type=<?php echo $type ?>&status=view">
+                                        <button id="validate-button" type="button" class="btn btn-danger">Annuler</button>
+                                    </a> 
+                                    <button type="submit" name="add_creation" class="btn btn-success">Valider !</button>
+                                </div>
+                                
                             </form>
                         </div>
 
@@ -290,11 +298,12 @@
 
                                     <?php
 
-    if (isset($_GET['type']))
+                                            if (isset($_GET['type']))
 
-    {
-        include('delete-view.php');
-    }                                    
+                                            {
+                                                include('delete-view.php');
+                                            }          
+                                                                                                                                              
                                     ?>
 
                                 </tbody>
@@ -327,15 +336,15 @@
 
             <section id="home-message">
 
-
+                <img src="images/ressources/vegetables.png">
                 <h1>Bienvenue chez Vegebook, votre jardin connecté !</h1>
-                <p>La gestion de votre jardin devient un jeu d'enfant :
+                <p>
                     Date de plantation, quantité planté, fréquence d'arrosage, ect... sont autant de paramètres qu'il sera possible de suivre afin de surveiller votre jardin pour optimiser son rendement.</p>
 
-                 <p>Pour utiliser le vegebook, rien de plus simple:<br>
-                 	<b>Première étape:</b> Se rendre sur la catégorie voulue (plantes, fruits, légumes),<br>
-                 	<b>Seconde étape:</b> Ajouter/Modifier/Supprimer l'élément,<br>
-                 	<b>Troisième étape:</b> Mettre à jour régulièrement son book.
+                 <p>La gestion de votre jardin devient un jeu d'enfant !<br><br>
+                 	<b>Première étape:</b><br> Se rendre sur la catégorie voulue (plantes, fruits, légumes),<br><br>
+                 	<b>Seconde étape:</b><br> Ajouter/Modifier/Supprimer l'élément,<br><br>
+                 	<b>Troisième étape:</b><br> Tenir à jour son Vegebook.
                  </p>
 
 
@@ -355,11 +364,11 @@
 
             <?php 
 
-if (isset($_GET['type']) && isset($_GET['status']) && isset($_GET['id']) && $_GET['status'] == 'modify')
+                    if (isset($_GET['type']) && isset($_GET['status']) && isset($_GET['id']) && $_GET['status'] == 'modify')
 
-{
-    include 'modify-treatment.php';
-}
+                    {
+                        include 'modify-treatment.php';
+                    }
 
             ?>
 
@@ -374,11 +383,11 @@ if (isset($_GET['type']) && isset($_GET['status']) && isset($_GET['id']) && $_GE
 
             <?php
 
-if (isset($_GET['type']) && isset($_GET['status']) && isset($_GET['id']) && $_GET['status'] == 'delete')
+                if (isset($_GET['type']) && isset($_GET['status']) && isset($_GET['id']) && $_GET['status'] == 'delete')
 
-{
-    include 'delete-confirmation.php';
-}
+                {
+                    include 'delete-confirmation.php';
+                }
 
             ?>
 
@@ -393,38 +402,50 @@ if (isset($_GET['type']) && isset($_GET['status']) && isset($_GET['id']) && $_GE
 
             <?php
 
-if (isset($_GET['type']) && isset($_GET['status']) && isset($_GET['id']) && $_GET['status'] == 'deleted')
+                if (isset($_GET['type']) && isset($_GET['status']) && isset($_GET['id']) && $_GET['status'] == 'deleted')
 
-{
-    include 'delete-treatment.php';
-}
+                {
+                    include 'delete-treatment.php';
+                }
 
             ?>
 
 
+ 
+
 
             <!--              overview (popup détails fiche) -->   
 
+            <?php
 
-            <!--              overview (popup détails fiche) -->   
+                if (isset($_GET['status']) && isset($_GET['id']) && $_GET['status'] == 'overview')
 
+                {
+                    include 'overview.php';
+                }
+
+            ?>
+            
+
+            
+            
+            
+            
+            <!--              confirmation ajoute -->   
 
 
             <?php
 
-if (isset($_GET['status']) && isset($_GET['id']) && $_GET['status'] == 'overview')
+                if (isset($_GET['status']) && isset($_GET['type']) && $_GET['status'] == 'added' && $_GET['type'] == 'add')
 
-{
-    include 'overview.php';
-}
+                {
+                    include 'traitement_add.php';
+                }
 
             ?>
 
-
-
-
-
-
+            
+            
 
         </div> 
 

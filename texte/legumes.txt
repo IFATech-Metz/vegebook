@@ -1,7 +1,10 @@
 1=nom=img=date=nbre=date=txt=date=txt
-2=Carotte=carottes.jpg=06/12/2018=1=01/01/1970=Tous les jours=01/01/1970=test
-3=Courgette=courgettes.jpg=04/12/2018=10=04/12/2018=Tous les jours=04/12/2018= RAS
-4=Navette2=navet.jpg=21/02/2018=10=21/02/2018=Tous les jours=21/02/2018=nono
-5=Potiron=potiron.jpg=04/12/2018=5=04/12/2018=Tous les jours=04/12/2018= RAS
-6=Radis=radis.jpg=01/01/1970=4=01/01/1970=2 jours=01/01/1970=test3
-7=Cerises2=605_cerises.jpg=01/01/1970=1=01/01/1970=22=01/01/1970=test2
+2=Haricot=beans.jpg=18/10/2018=35=04/12/2018=Tous les jours=02/10/2018= RAS
+3=Poireau=leek.jpg=12/10/2018=15=04/12/2018=Tous les jours=03/10/2018= RAS
+4=Salade=salad.jpg=14/10/2018=25=04/12/2018=Tous les jours=05/10/2018= RAS
+5=Carotte=carottes.jpg=04/12/2018=20=04/12/2018=Tous les jours=04/12/2018= RAS
+6=Choux-Fleur=choux-fleur.jpg=04/12/2018=5=04/12/2018=Tous les jours=04/12/2018= RAS
+7=Courgette=courgettes.jpg=04/12/2018=10=04/12/2018=Tous les jours=04/12/2018= RAS
+8=Navet=navet.jpg=04/12/2018=10=04/12/2018=Tous les jours=04/12/2018= RAS
+9=Pomme de Terre=pdt.jpg=04/12/2018=20=04/12/2018=Tous les jours=04/12/2018= RAS
+10=Potiron=potiron.jpg=04/12/2018=5=04/12/2018=Tous les jours=04/12/2018= RAS
