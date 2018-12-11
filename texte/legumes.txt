@@ -1,7 +1,0 @@
-1=nom=img=date=nbre=date=txt=date=txt
-2=Carotte=carottes.jpg=06/12/2018=1=01/01/1970=Tous les jours=01/01/1970=test
-3=Courgette=courgettes.jpg=04/12/2018=10=04/12/2018=Tous les jours=04/12/2018= RAS
-4=Navette2=navet.jpg=21/02/2018=10=21/02/2018=Tous les jours=21/02/2018=nono
-5=Potiron=potiron.jpg=04/12/2018=5=04/12/2018=Tous les jours=04/12/2018= RAS
-6=Radis=radis.jpg=01/01/1970=4=01/01/1970=2 jours=01/01/1970=test3
-7=Cerises2=605_cerises.jpg=01/01/1970=1=01/01/1970=22=01/01/1970=test2
