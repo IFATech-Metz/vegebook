@@ -6,6 +6,10 @@ if(isset($_POST['add_creation']))
 
 	if(!empty($_POST['nom']) AND !empty($_POST['catégorie']) AND !empty($_POST['plantation']) AND !empty($_POST['recolte']) AND !empty($_POST['quantite']) AND !empty($_POST['frequence']) AND !empty($_POST['arrosage']) AND !empty($_POST['notes']) AND (isset($_FILES['file_img']) AND $_FILES['file_img']['error'] == 0))
 	{
+        $name = $_POST['nom'];
+        $date = $_POST['plantation'];
+        $type = $_POST['catégorie'];
+        
 
 		 if ($_FILES['file_img']['size'] <= 1000000)
         {
@@ -53,7 +57,34 @@ if(isset($_POST['add_creation']))
 
 					    fclose($file_add);
 
-					    echo 'Ajout effectué';
+			
+    
+    
+         echo   "<section id='modify-confirmation'>   
+                
+                
+               <p> L'élément $name planté le $date a bien été ajouté ! </p>
+
+               <a href='index.php?type=$type&status=view'>
+                   <span class='glyph3 glyphicon glyphicon-arrow-left'></span>
+               </a>      
+
+            </section>";
+    
+
+    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 
                 }
                 else
@@ -73,5 +104,8 @@ if(isset($_POST['add_creation']))
 	}
 
 }
-
+else
+{
+	echo 'Aucun formulaire envoyé';
+}
 ?>

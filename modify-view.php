@@ -8,17 +8,6 @@
 
     $nbr_inve = 0;
 
-    $file_handle = fopen("texte/$type_txt.txt", "r");
-
-    while(!feof($file_handle)) {
-
-        fgets($file_handle);
-        
-        $nbr_inve ++;
-        
-        
-    }
-    
 
     $file_handle = fopen("texte/$type_txt.txt", "r");
 
@@ -34,16 +23,15 @@
 
         $elements[] = /*array($parts[1] =>*/
          array(	
-         		'id' => $parts[0],
+         		'id' =>  $nbr_inve ++,
          		'name' => $parts[1],
          		'img' => $parts[2],
-         		'name_fr' => $parts[3],
-         		'plantation' => $parts[4],
-         		'quantite' => $parts[5],
-         		'estimation' => $parts[6],
-         		'freq_arrosage' => $parts[7],
-         		'dernier_arrosage' => $parts[8],
-                'notes' => $parts[9]);
+         		'plantation' => $parts[3],
+         		'quantite' => $parts[4],
+         		'estimation' => $parts[5],
+         		'freq_arrosage' => $parts[6],
+         		'dernier_arrosage' => $parts[7],
+                'notes' => $parts[8]);
                 }
   
     fclose($file_handle);
@@ -55,7 +43,7 @@
 
 for ($i=1; $i < $nbr_inve ; $i++) { 
 	 	echo 
-            '<tr><td><a href="index.php?id='.$i.'&type='.$type_txt.'&status=modify"> 
+            '<tr><td><a href="index.php?id='.($i+1).'&type='.$type_txt.'&status=modify&status2=noconfirm"> 
             <img src="images/ressources/edit.png" class="image_delete_input"></a></td>' .
 //            '<tr><td><form method="post" action="delete-traitement.php"> 
 //    <input  name="id" value="'.$i.'"> 

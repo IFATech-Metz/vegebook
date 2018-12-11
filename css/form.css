@@ -48,4 +48,33 @@
             width       : 70%;
             float       : left;
         }
-        
+        legend
+        {
+            text-align: center;
+        }
+        fieldset
+        {
+
+            margin-top: 100px;
+
+        }
+
+
+
+        .fieldset-margin
+        {
+                 margin-top: 70px;
+
+        }
+
+        #button-modify-form
+        {
+
+            margin: auto;
+            text-align: center;
+            margin-top: 75px;
+        }
+        #validate-button{
+
+            margin-right: 30px;
+        }
