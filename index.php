@@ -151,7 +151,7 @@
                             <table id="home_tab" class="tab-resize">
                                 <thead>
                                     <tr id="salut">
-                                        <th class="table_title_id">id</th>
+                                        <th class="table_title_id">N°</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
                                         <th class="table_title_plantation">Date<br>Plantation</th>
@@ -218,7 +218,7 @@
                                 <fieldset>
                                     <legend>Commentaires</legend>
 
-                                    <textarea name="notes" id="notes"  required></textarea><br>
+                                    <center><input type="text" name="notes" id="notes" style="width: 350px; height: 100px" required></center><br>
                                 </fieldset>
 
                                 <p style="text-align:center">* Tous les champs sont obligatoires</p>
@@ -245,7 +245,7 @@
                                 <thead>
                                     <tr>
                                         <th class="table_title_delete"></th>
-                                        <th class="table_title_id">id</th>
+                                        <th class="table_title_id">N°</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
                                         <th class="table_title_plantation">Date<br>Plantation</th>
@@ -282,7 +282,7 @@
                                 <thead>
                                     <tr>
                                         <th class="table_title_delete"></th>
-                                        <th class="table_title_id">id</th>
+                                        <th class="table_title_id">N°</th>
                                         <th class="table_title_nom">Nom</th>
                                         <th class="table_title_photo">Photo</th>
                                         <th class="table_title_plantation">Date<br>Plantation</th>

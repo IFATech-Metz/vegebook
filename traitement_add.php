@@ -6,9 +6,9 @@ if(isset($_POST['add_creation']))
 
 	if(!empty($_POST['nom']) AND !empty($_POST['catégorie']) AND !empty($_POST['plantation']) AND !empty($_POST['recolte']) AND !empty($_POST['quantite']) AND !empty($_POST['frequence']) AND !empty($_POST['arrosage']) AND !empty($_POST['notes']) AND (isset($_FILES['file_img']) AND $_FILES['file_img']['error'] == 0))
 	{
-        $name = $_POST['nom'];
-        $date = $_POST['plantation'];
-        $type = $_POST['catégorie'];
+        $name = htmlspecialchars($_POST['nom']);
+        $date = htmlspecialchars($_POST['plantation']);
+        $type = htmlspecialchars($_POST['catégorie']);
         
 
 		 if ($_FILES['file_img']['size'] <= 1000000)
@@ -51,7 +51,7 @@ if(isset($_POST['add_creation']))
 							$date_arrosage_final = date('d/m/Y', strtotime($date_changement_arrosage));
 
 							 $file_add = fopen("texte/$categorie.txt", "a");
-					   		 $file_content = "\r\n".$ajout_id.'='.$_POST['nom'].'='.$name_file.'='.$date_plantation_final.'='.$_POST['quantite'].'='.$date_recolte_final.'='.$_POST['frequence'].'='.$date_arrosage_final.'='.$_POST['notes'];
+					   		 $file_content = "\r\n".$ajout_id.'='.htmlspecialchars($_POST['nom']).'='.htmlspecialchars($name_file).'='.htmlspecialchars($date_plantation_final).'='.$_POST['quantite'].'='.htmlspecialchars($date_recolte_final).'='.htmlspecialchars($_POST['frequence']).'='.htmlspecialchars($date_arrosage_final).'='.htmlspecialchars($_POST['notes']);
 
 					    fwrite($file_add, $file_content);
 

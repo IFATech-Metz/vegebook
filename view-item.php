@@ -54,7 +54,7 @@ for ($i=1; $i < $nbr_inve ; $i++) {
 
     $keys = array_keys($elements);
     echo 
-        '<tr class="table-hover-click" href="index.php?id='.$i.'&status=overview&type='.$type_txt.'"><td>'  . $elements[$i]['id'] . '</td>' .
+        '<tr class="table-hover-click" href="index.php?id='.$i.'&status=overview&type='.$type_txt.'"><td>'  . $elements[$i]['id']. '</td>' .
         //                    '<td>'  . $elements[$i]['name'] . '</td>' .
         '<td>' . $elements[$i]['name'] . '</a></td>' .                    
         '<td> ' . '<img class="content_img" src="images/' . $elements[$i]['img'] . '"/>' . '</td>' .

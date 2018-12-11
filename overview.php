@@ -10,7 +10,7 @@
                 <div class="w3-container">
                     <img id="img-overview" src="images/<?php echo $elements[$id]['img'] ?>">
 
-                    <p class="overview-paragraph">id : <?php echo $elements[$id]['id'] ?></p>
+                    <p class="overview-paragraph">id : <?php echo ($elements[$id]['id']+1) ?></p>
                     <p class="overview-paragraph">Date de plantation : <?php echo $elements[$id]['plantation'] ?></p>
                     <p class="overview-paragraph">Date de récolte : <?php echo $elements[$id]['estimation'] ?></p>
                     <p class="overview-paragraph">Quantité planté : <?php echo $elements[$id]['quantite'] ?></p>

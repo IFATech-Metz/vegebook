@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 <section id="modify-treatement">    
 
 <?php
@@ -96,15 +84,15 @@ if (isset($_FILES['file_img']) AND $_FILES['file_img']['error'] == 0)
 	$date_changement_arrosage = str_replace('-', '/', $_POST['arrosage']);
 	$date_arrosage_final = date('d/m/Y', strtotime($date_changement_arrosage));
 
-            $name = $_POST['nom'];
-            $img = $name_file;
-            $plantation = $date_plantation_final;
-            $quantite = $_POST['quantite'];
-            $estimation = $date_recolte_final;
-            $freq_arrosage = $_POST['frequence'];
-            $dernier_arrosage = $date_arrosage_final;
-            $notes_valid = rtrim($_POST['notes'], "\r\n");
-            $notes = $notes_valid;
+            $name = htmlspecialchars($_POST['nom']);
+            $img = htmlspecialchars($name_file);
+            $plantation = htmlspecialchars($date_plantation_final);
+            $quantite = htmlspecialchars($_POST['quantite']);
+            $estimation = htmlspecialchars($date_recolte_final);
+            $freq_arrosage = htmlspecialchars($_POST['frequence']);
+            $dernier_arrosage = htmlspecialchars($date_arrosage_final);
+            $notes_valid = htmlspecialchars(rtrim($_POST['notes'], "\r\n"));
+            $notes = htmlspecialchars($notes_valid);
 
             for ($i=0; $i < $count; $i++) { 
                     if($i === $id_array_modif)
@@ -168,13 +156,25 @@ if (isset($_FILES['file_img']) AND $_FILES['file_img']['error'] == 0)
 
             fclose($file_handle_form);
 
+
+    $date_form_plantation = str_replace('/', '-', $array_form[$id-1]['plantation']);
+    $date_plantation_form = date('Y-m-d', strtotime($date_form_plantation));
+
+    $date_form_recolte = str_replace('/', '-', $array_form[$id-1]['estimation']);
+    $date_recolte_form = date('Y-m-d', strtotime($date_form_recolte));
+
+    $date_form_arrosage = str_replace('/', '-', $array_form[$id-1]['dernier_arrosage']);
+    $date_arrosage_form = date('Y-m-d', strtotime($date_form_arrosage));
+
+
             $name_input = $array_form[$id-1]['name'];
             $img_input = $array_form[$id-1]['img'];
-            $plantation_input = $array_form[$id-1]['plantation'];
+            $plantation_input = $date_plantation_form;
             $quantite_input = $array_form[$id-1]['quantite'];
-            $estimation_input = $array_form[$id-1]['estimation'];
+            $estimation_input = $date_recolte_form;
             $freq_input = $array_form[$id-1]['freq_arrosage'];
-            $dernier_input = $array_form[$id-1]['dernier_arrosage'];
+            $dernier_input = $date_arrosage_form;
+            $notes_input = $array_form[$id-1]['notes'];
 
 
 
@@ -262,9 +262,9 @@ if (isset($_FILES['file_img']) AND $_FILES['file_img']['error'] == 0)
             <div class="fieldset-margin">  
                 
                 <fieldset>
-                    <legend>Commentaires</legend>
+                    <legend>Commentaires <span class="glyphicon glyphicon-heart"></span></legend>
 
-                    <textarea name="notes" id="notes"required></textarea><br>
+                    <center><input type="text" name="notes" id="notes" style="width: 350px; height: 100px" value="<?php echo $notes_input; ?>" required></center><br>
                 </fieldset>
                 
             </div>
