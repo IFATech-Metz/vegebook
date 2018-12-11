@@ -7,6 +7,8 @@ $(document).ready(function () {
             url: "DataTables/media/French.json"
 
         }
+        
+        
 
     });
     
@@ -18,6 +20,8 @@ $(document).ready(function () {
             url: "DataTables/media/French.json"
 
         }
+        
+        
 
     });
     
@@ -30,5 +34,21 @@ $(document).ready(function () {
         }
 
     });
+    
+    
+       $('#home_tab .table-hover-click').click(function(){
+        window.location = $(this).attr('href');
+        return false;
+    });
+    
+//           $('#delete_tab .table-hover-click').click(function(){
+//        window.location = $(this).attr('href');
+//        return false;
+//    });
+//    
+//           $('#modify_tab .table-hover-click').click(function(){
+//        window.location = $(this).attr('href');
+//        return false;
+//    });
 
 });
