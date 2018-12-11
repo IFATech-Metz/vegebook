@@ -321,6 +321,13 @@ text-align: center;
 
 
 /*configuration tableau*/
+
+.table-hover-click:hover
+{
+    background-color: green;
+    cursor: pointer;
+    color:white;
+}
 label
 {
     margin: 25px 0px 0px 0px;
@@ -447,6 +454,7 @@ width: 20px;
 
 /*delete treamtment section */
 
+
 #delete-treatement
 {
     
@@ -459,6 +467,61 @@ width: 20px;
 
 #container-content-section
 {
+
     margin-bottom: 100px;   
+}
+
+
+
+/*overview section*/
+
+
+
+#overview h1
+{
+    font-family: 'Mystery Quest', cursive;
+    text-align: center;
+}
+
+
+.overview-paragraph
+{
+
+    text-align: center;
+}
+
+#head-overview
+{
+    
+    font-family: 'Mystery Quest', cursive;
+    text-align: center;
+        border-bottom: 1px solid black;
+   
+}
+#head-overview h2
+{
+    font-size: 6vh;
+    color: black;
+}
+
+.w3-container
+{
+    
+    text-align: center;
+    
+}
+.w3-teal
+{
+    background-color: black;
+}
+#img-overview
+{
+    width: 250px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius:15px 50px; 
+    border: solid 1px black;
+   box-shadow: 10px 10px 20px grey;
+    
 }
 

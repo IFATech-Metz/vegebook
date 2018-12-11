@@ -73,5 +73,8 @@ if(isset($_POST['add_creation']))
 	}
 
 }
-
+else
+{
+	echo 'Aucun formulaire envoyé';
+}
 ?>

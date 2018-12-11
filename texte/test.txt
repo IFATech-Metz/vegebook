@@ -1,0 +1,8 @@
+1=nom=img=date=nbre=date=txt=date=txt
+2=Carotte=carottes.jpg=04/12/2018=20=04/12/2018=Tous les jours=04/12/2018= RAS
+3=Courgette=courgettes.jpg=04/12/2018=10=04/12/2018=Tous les jours=04/12/2018= RAS
+4=Navet=navet.jpg=04/12/2018=10=04/12/2018=Tous les jours=04/12/2018= RAS
+5=Potiron=potiron.jpg=04/12/2018=5=04/12/2018=Tous les jours=04/12/2018= RAS
+6=Radis=radis.jpg=14/12/2018=4=10/12/2018=2 jours=28/12/2018=nana
+7=New Enter=258_navet.jpg=01/01/1970=22=01/01/1970=22=01/01/1970=22
+8=Pomme de Terre=pdt.jpg=19/12/2018=10=07/12/2018=222=01/01/1970=lolo
